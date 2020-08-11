@@ -1,35 +1,24 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main extends Human implements Walkable,Singable {
-    public Main(String name, String surname, int age) {
-        super(name, surname, age);
-    }
-    static List<Human> militaryMans = new ArrayList<>();
-    static Man gosha = new Man("Гоша", "Чантурия", 26);
-    static Man vitaliya = new Man("Виталя", "Нежинский", 29);
-    static Man george = new Man("Гоша", "Купчинский", 17);
-    Man petr = new Man("Петр", "Ярчер", 21);
+public class Main {
 
     public static void main(String[] args) {
+        List<Man> militaryMans = new ArrayList<>();
+        Man gosha = new Man("Гоша", "Чантурия", 26);
+        Man vitaliya = new Man("Виталя", "Нежинский", 29);
+        Man george = new Man("Гоша", "Купчинский", 17);
+        Man petr = new Man("Петр", "Ярчер", 21);
         militaryMans.add(gosha);
         militaryMans.add(vitaliya);
         militaryMans.add(george);
+        militaryMans.add(petr);
 
-        for (Human man : militaryMans) {
-            if (man.getAge() > 17 && man.getAge() < 27) {
-                System.out.println(man);
-            }
-        }
-
-    }
-
-    @Override
-    public void walk() {
-        for (Human hum : militaryMans)
-        if (getName() == "Гоша" && getSurname() == "Чантурия") {
-            System.out.println("Гоша бегает!");
+        for (Man man : militaryMans) {
+            man.walk();
+            man.printWhoGoToArmy();
         }
     }
-
 }
+
+
