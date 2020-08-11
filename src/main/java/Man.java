@@ -13,17 +13,14 @@ public class Man implements Walkable, Singable {
 
     @Override
     public void walk() {
-        for (Man man : militaryMans)
             if (getName() == "Гоша" && getSurname() == "Чантурия") {
                 System.out.println("Гоша бегает!");
             }
     }
 
     public void printWhoGoToArmy() {
-        for (Man man : militaryMans) {
-            if (man.getAge() > 17 && man.getAge() < 27) {
-                System.out.println(man);
+            if (getAge() > 17 && getAge() < 27) {
+                System.out.println(getSurname());
             }
         }
     }
-}

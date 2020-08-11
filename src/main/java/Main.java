@@ -1,11 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main extends Man {
-
-    public Main(String name, String surname, int age) {
-        super(name, surname, age);
-    }
+public class Main {
 
     public static void main(String[] args) {
         List<Man> militaryMans = new ArrayList<>();
@@ -17,6 +13,11 @@ public class Main extends Man {
         militaryMans.add(vitaliya);
         militaryMans.add(george);
         militaryMans.add(petr);
+
+        for (Man man : militaryMans) {
+            man.walk();
+            man.printWhoGoToArmy();
+        }
     }
 }
 
