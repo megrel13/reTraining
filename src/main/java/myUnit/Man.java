@@ -1,3 +1,5 @@
+package myUnit;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -13,14 +15,16 @@ public class Man implements Walkable, Singable {
 
     @Override
     public void walk() {
-            if (getName() == "Гоша" && getSurname() == "Чантурия") {
-                System.out.println("Гоша бегает!");
-            }
+        if (getName() == "Гоша" && getSurname() == "Чантурия") {
+            age++;
+            System.out.println("Гоша бегает!");
+        }
     }
 
     public void printWhoGoToArmy() {
-            if (getAge() > 17 && getAge() < 27) {
-                System.out.println(getSurname());
-            }
+        if (getAge() > 17 && getAge() < 27) {
+            System.out.println(getSurname());
         }
     }
+
+}
